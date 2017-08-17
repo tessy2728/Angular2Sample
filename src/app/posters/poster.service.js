@@ -19,7 +19,7 @@ var PosterService = (function () {
     }
     PosterService.prototype.getPosterList = function () {
         return this._http.get(this.posterURL)
-            .map(function (response) { return response.json(); })
+            .map(function (res) { return res.json(); })
             .do(function (data) { return console.log(JSON.stringify(data)); });
     };
     return PosterService;

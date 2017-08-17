@@ -9,9 +9,9 @@ import { Poster } from './Poster';
 export class PosterService {
     private posterURL = 'json/CONTENTLISTINGPAGE-PAGE1.json';
     constructor(private _http: Http){} 
-    getPosterList(): Observable<Poster[]> {
+    getPosterList() {
         return this._http.get(this.posterURL) 
-        .map((response: Response) => <Poster[]> response.json()) 
+        .map((res:Response) => res.json())
         .do(data => console.log(JSON.stringify(data)));
     }
 }
