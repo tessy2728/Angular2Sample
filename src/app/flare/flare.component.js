@@ -6,17 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var BasicComponent = (function () {
-    function BasicComponent() {
-        this.name = 'Hello world';
+var FlareComponent = (function () {
+    function FlareComponent() {
     }
-    return BasicComponent;
+    FlareComponent.prototype.ngOnInit = function () {
+        //Draw chart
+    };
+    return FlareComponent;
 }());
-BasicComponent = __decorate([
+FlareComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<h1>Hello {{name}}</h1>\n              <button [routerLink] = \"['/clubs']\">Click me to see the list of clubs</button>\n              <button [routerLink] = \"['/posters']\">Click me to see the list of poster</button>\n              <router-outlet></router-outlet>",
+        selector: 'flare-chart',
+        templateUrl: 'app/flare/flare.component.html'
     })
-], BasicComponent);
-exports.BasicComponent = BasicComponent;
-//# sourceMappingURL=app.component.js.map
+], FlareComponent);
+exports.FlareComponent = FlareComponent;
+//# sourceMappingURL=flare.component.js.map

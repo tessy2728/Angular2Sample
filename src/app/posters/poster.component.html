@@ -1,0 +1,5 @@
+<ul class="cards">
+    <li *ngFor = 'let poster of posterList'>
+        <a href=""><img [src] = 'poster.poster_image' />{{poster.name}}</a>
+    </li>
+</ul>

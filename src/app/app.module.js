@@ -7,12 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var poster_component_1 = require("./posters/poster.component");
 var club_component_1 = require("./clubs/club.component");
 var router_1 = require("@angular/router");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var appRoutes = [{
         path: 'clubs', component: club_component_1.ClubListComponent
+    },
+    {
+        path: 'posters', component: poster_component_1.PosterListComponent
     }];
 var AppModule = (function () {
     function AppModule() {
@@ -22,7 +26,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes), http_1.HttpModule],
-        declarations: [app_component_1.BasicComponent, club_component_1.ClubListComponent],
+        declarations: [app_component_1.BasicComponent, club_component_1.ClubListComponent, poster_component_1.PosterListComponent],
         bootstrap: [app_component_1.BasicComponent]
     })
 ], AppModule);
